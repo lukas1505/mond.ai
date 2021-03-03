@@ -16,7 +16,10 @@ def functions(recog):
         print("ich öffne facebook")
         webbrowser.open_new_tab("https://facebook.com")
     elif (recog == "was kann ich drucken"):
-        print("hier ein paar Ideen")
+        print("hier ein paar Ideen")   
         webbrowser.open_new_tab("https://www.thingiverse.com")
+    elif (recog == "öffne googel"):
+        print("ich öffne Googel")
+        webbrowser.open_new_tab("https://google.com")
     else:
         print("Es tut mir leid das kann ich nocht nicht aber ich lerne noch")

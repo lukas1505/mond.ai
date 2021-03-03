@@ -14,3 +14,9 @@ Tätigkeiten die schon ausgeführt werden können wären zum Beispiel:
 - öffne youtube
 - öffne instagram
 - öffne facebook
+
+
+Um das Programm zu starten einfach start.py mit Python ausführen
+In Windows:
+Powershell starten
+"Python start.py" eingeben 

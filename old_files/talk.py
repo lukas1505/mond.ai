@@ -1,4 +1,5 @@
-from functions import functions
+from websites import functions
+from start_mondai import start
 
 def speak(recog):
     if (recog == "Hallo"):
@@ -37,5 +38,8 @@ def speak(recog):
         print("was denn")
     elif (recog == "wer hat dich gemacht"):
         print("ich wurde von LP erschaffen")
+    elif (recog == "danke"):
+        print("ich habe verstanden")
+        start()
     else:
         functions(recog)
