@@ -11,7 +11,6 @@ Packages or Librarys who have to be installed are:
 - googlevoice
 
 (More Infos in the requirements.txt)
-The PyAudio .whl file for Python 3.8 is in the directory packages/
 
 To start the programm in Windows:
 1. run python file "python mondai.py"
