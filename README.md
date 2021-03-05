@@ -1,22 +1,32 @@
 # mond.ai
-a speech recognition programm
+A speech Recognition Programm programmed with Python
 
-Sprache zu Text wird von der Api von Google umgewandelt
-Es wird eine Internetverbindung benötigt um dieses Programm zu verwenden
+Programm is tested only with Python 3.8
 
-Man muss nur sagen was man wissen will oder getan werden soll:
-Um das Programm zu starten sagt man einfach "Mondi" ...
+Programm only runs with Windows because the text to speech Library is a Windows only Library
 
-Tätigkeiten die schon ausgeführt werden können wären zum Beispiel:
-- was machst du
-- wie gehts dir
-- wie ist das wetter
-- öffne youtube
-- öffne instagram
-- öffne facebook
+Packages or Librarys who have to be installed are:
+- PyAudio
+- SpeechRecognition
+- googlevoice
+
+(More Infos in the requirements.txt)
+The PyAudio .whl file for Python 3.8 is in the directory packages/
+
+To start the programm in Windows:
+1. run python file "python mondai.py"
+2. say "Mondi"
+3. Enjoy
+
+What can you do with this programm:
+- open Youtube
+- open Instagram
+- open Facebook
+- open Stackoverflow
+- open Wikipedia
+- open Google
+- checking the weather in germany
+- talking with the programm
 
 
-Um das Programm zu starten einfach start.py mit Python ausführen
-In Windows:
-Powershell starten
-"Python mondai.py" eingeben 
+Created by Lukas Paul
