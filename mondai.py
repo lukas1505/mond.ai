@@ -33,7 +33,6 @@ def speak(recog):
     if (recog == "hello"):
         print("hello how can i help you")
         speaker.Speak("hello how can i help you")
-        # testsay()
     elif (recog == "are you here"):
         print("I am always on your side")
         speaker.Speak("I am always on your side")
@@ -69,9 +68,7 @@ def speak(recog):
         speaker.Speak("i am doing nothing right now")
     elif (recog == "could you help me"):
         print("i would like to help you")
-        print("how can i help you")
         speaker.Speak("i would like to help you")
-        speaker.Speak("how can i help you")
     elif (recog == "you can do nothing for me"):
         print("i understood")
         speaker.Speak("i understood")
@@ -125,6 +122,10 @@ def functions(recog):
         print("open Wikipedia")
         speaker.Speak("open wikipedia")
         webbrowser.open("https://wikipedia.org")
+    elif (recog == "new tab"):
+        print("open new tab")
+        speaker.Speak("open new tab")
+        webbrowser.open("https://google.com")
     else:
         print("I didnt understand this")
         speaker.Speak("i didnt understand this")
