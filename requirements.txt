@@ -1,3 +1,8 @@
 SpeechRecognition == 3.8.1
 googlevoice == 3.0.0
 PyAudio
+google-api-core==1.26.1
+google-auth==1.27.1
+google-cloud-texttospeech==2.2.0
+googleapis-common-protos==1.53.0
+googlevoice==3.0.0
