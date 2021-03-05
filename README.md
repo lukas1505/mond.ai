@@ -19,4 +19,4 @@ Tätigkeiten die schon ausgeführt werden können wären zum Beispiel:
 Um das Programm zu starten einfach start.py mit Python ausführen
 In Windows:
 Powershell starten
-"Python start.py" eingeben 
+"Python mondai.py" eingeben 
