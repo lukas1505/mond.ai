@@ -3,6 +3,8 @@ import time
 import subprocess
 import webbrowser
 import win32com.client
+import gtts
+from playsound import playsound
 
 
 speaker = win32com.client.Dispatch("SAPI.SpVoice")
@@ -13,21 +15,25 @@ def mondai():
 
     with speech as source:
         print("how can i help you")
-        speaker.Speak("how can i help you")
+        playsound("hello.mp3")
         audio = r.listen(source)
         
     try:
         recog = r.recognize_google(audio, language='en-US')
         print(recog)
         print("processing...")
-        speaker.Speak("processing")
+        tts = gtts.gTTS("processing...")
+        tts.save("processing.mp3")
+        playsound("processing.mp3")
         speak(recog)
         time.sleep(2)
         mondai()
 
     except sr.UnknownValueError:
-        print("sorry i didnt understand this")
-        speaker.Speak("sorry i didnt understand this")
+        print("sorry i dont understand this")
+        tts = gtts.gTTS("sorry i dont understand this")
+        tts.save("dontunderstand.mp3")
+        playsound("dontunderstand.mp3")
 
 def speak(recog):
     if (recog == "hello"):
@@ -133,9 +139,9 @@ def functions(recog):
 
 def start():
     print("If you need me only say my Name")
-    speaker.Speak("if you need me only say my Name")
+    playsound("onlysayname.mp3")
     print("I am called Mondi")
-    speaker.Speak("I am called Mondi")
+    playsound("name.mp3")
     r = sr.Recognizer()
     speech = sr.Microphone()
     while True:
@@ -146,42 +152,34 @@ def start():
                 print(recog)
                 if (recog == "Mondi"):
                     print("starting...")
-                    speaker.Speak("starting")
                     mondai()
                     start()
                 if (recog == "Monti"):
                     print("starting...")
-                    speaker.Speak("starting")
                     mondai()
                     start()
                 if (recog == "Modi"):
                     print("starting...")
-                    speaker.Speak("starting")
                     mondai()
                     start()
                 if (recog == "Monty" ):
                     print("starting...")
-                    speaker.Speak("starting")
                     mondai()
                     start()
                 if (recog == "Monday" ):
                     print("starting...")
-                    speaker.Speak("starting")
                     mondai()
                     start()
                 if (recog == "mondi" ):
                     print("starting...")
-                    speaker.Speak("starting")
                     mondai()
                     start()
                 if (recog == "Mondeo" ):
                     print("starting...")
-                    speaker.Speak("starting")
                     mondai()
                     start()
                 if (recog == "bungie" ):
                     print("starting...")
-                    speaker.Speak("starting")
                     mondai()
                     start()
             except sr.UnknownValueError:
