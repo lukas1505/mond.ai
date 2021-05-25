@@ -5,8 +5,16 @@ import webbrowser
 import win32com.client
 import gtts
 from playsound import playsound
+import os
 
 speaker = win32com.client.Dispatch("SAPI.SpVoice")
+
+def getvars():
+    file1 = open("pathtospotify.txt", "r")
+    global spotifypath
+    spotifypath=file1.read()
+    print(spotifypath)
+getvars()
 
 def mondai():
     r = sr.Recognizer()
@@ -21,10 +29,11 @@ def mondai():
         recog = r.recognize_google(audio, language='en-US')
         print(recog)
         print("processing...")
-        tts = gtts.gTTS("processing...")
-        tts.save("processing.mp3")
-        playsound("processing.mp3")
+        # tts = gtts.gTTS("processing...")
+        # tts.save("processing.mp3")
+        # playsound("processing.mp3")
         speak(recog)
+        # os.remove("processing.mp3")
         time.sleep(2)
         mondai()
 
@@ -33,6 +42,7 @@ def mondai():
         tts = gtts.gTTS("sorry i dont understand this")
         tts.save("dontunderstand.mp3")
         playsound("dontunderstand.mp3")
+        os.remove("dontunderstand.mp3 ")
 
 def speak(recog):
     if (recog == "hello"):
@@ -125,6 +135,7 @@ def speak(recog):
         tts = gtts.gTTS("i unterstand")
         tts.save("understand.mp3")
         playsound("understand.mp3")
+        os.remove("understand.mp3")
         start()
     else:
         functions(recog)
@@ -143,6 +154,12 @@ def functions(recog):
         tts.save("instagram.mp3")
         playsound("instagram.mp3")
         webbrowser.open_new_tab("https://instagram.com")
+    elif (recog == "open Spotify"):
+        print("open spotify")
+        tts = gtts.gTTS("open Spotify")
+        tts.save("spotify.mp3")
+        playsound("spotify.mp3")
+        os.system(spotifypath)
     elif (recog == "open YouTube"):
         print("open youtube")
         tts = gtts.gTTS("open Youtube")
@@ -167,7 +184,7 @@ def functions(recog):
         tts.save("google.mp3")
         playsound("google.mp3") 
         webbrowser.open_new_tab("https://google.com")
-    elif (recog == "open stackoverflow"):
+    elif (recog == "open stack overflow"):
         print("open stackoverflow")
         tts = gtts.gTTS("open stack overflow")
         tts.save("overflow.mp3")
@@ -186,10 +203,11 @@ def functions(recog):
         playsound("tab.mp3")
         webbrowser.open("https://google.com")
     else:
-        print("I didnt understand this")
-        tts = gtts.gTTS("I didnt understand this")
-        tts.save("understand.mp3")
-        playsound("understand.mp3")
+        print("I dont understand this")
+        tts = gtts.gTTS("I dont understand this")
+        tts.save("idontunderstand.mp3")
+        playsound("idontunderstand.mp3")
+        os.remove("idontunderstand.mp3")
 
 
 def start():
@@ -198,9 +216,11 @@ def start():
     tts.save("sayname.mp3")
     playsound("sayname.mp3")
     print("I am called Mondi")
+    os.remove("sayname.mp3")
     tts = gtts.gTTS("I am called Mondi")
     tts.save("calledmondi.mp3")
     playsound("calledmondi.mp3")
+    os.remove("calledmondi.mp3 ")
     r = sr.Recognizer()
     speech = sr.Microphone()
     while True:
@@ -229,6 +249,14 @@ def start():
                     print("starting...")
                     mondai()
                     start()
+                if (recog == "Monday Monday" ):
+                    print("starting...")
+                    mondai()
+                    start()  
+                if (recog == "Monday Monday Monday" ):
+                    print("starting...")
+                    mondai()
+                    start()                
                 if (recog == "mondi" ):
                     print("starting...")
                     mondai()
