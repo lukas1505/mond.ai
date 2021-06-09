@@ -29,11 +29,7 @@ def mondai():
         recog = r.recognize_google(audio, language='en-US')
         print(recog)
         print("processing...")
-        # tts = gtts.gTTS("processing...")
-        # tts.save("processing.mp3")
-        # playsound("processing.mp3")
         speak(recog)
-        # os.remove("processing.mp3")
         time.sleep(2)
         mondai()
 
