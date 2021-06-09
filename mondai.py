@@ -240,23 +240,11 @@ def functions(recog):
         os.remove("tab.mp3")
     else:
         print("I dont understand this")
-        tts = gtts.gTTS("I dont understand this")
-        tts.save("idontunderstand.mp3")
-        playsound("idontunderstand.mp3")
-        os.remove("idontunderstand.mp3")
 
 
 def start():
     print("If you need me only say my Name")
-    # tts = gtts.gTTS("If you need me only say my Name")
-    # tts.save("sayname.mp3")
-    # playsound("sayname.mp3")
     print("I am called Mondi")
-    # os.remove("sayname.mp3")
-    tts = gtts.gTTS("I am called Mondi")
-    # tts.save("calledmondi.mp3")
-    # playsound("calledmondi.mp3")
-    # os.remove("calledmondi.mp3 ")
     r = sr.Recognizer()
     speech = sr.Microphone()
     while True:
@@ -307,9 +295,5 @@ def start():
                     start()
             except sr.UnknownValueError:
                 print("try again")
-                # tts = gtts.gTTS("try again")
-                # tts.save("tryagain.mp3")
-                # playsound("tryagain.mp3")
-                # os.remove("tryagain.mp3")
                 start()
 start()
