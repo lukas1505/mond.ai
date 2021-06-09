@@ -10,3 +10,5 @@ pip install gtts
 pip install playsound
 
 ECHO please execute start.py
+
+python start.py
