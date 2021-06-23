@@ -222,7 +222,7 @@ def functions(recog):
         tts = gtts.gTTS("open stack overflow")
         tts.save("overflow.mp3")
         playsound("overflow.mp3")
-        webbrowser.open_new_tabl("https://stackoverflow.com")
+        webbrowser.open_new_tab("https://stackoverflow.com")
         os.remove("overflow.mp3")
     elif (recog == "open wikipedia"):
         print("open Wikipedia")
@@ -238,6 +238,27 @@ def functions(recog):
         playsound("tab.mp3")
         webbrowser.open("https://google.com")
         os.remove("tab.mp3")
+    elif (recog == "new tap"):
+        print("open new tab")
+        tts = gtts.gTTS("open new tab")
+        tts.save("tab.mp3")
+        playsound("tab.mp3")
+        webbrowser.open("https://google.com")
+        os.remove("tab.mp3")
+    elif (recog == "new top"):
+        print("open new tab")
+        tts = gtts.gTTS("open new tab")
+        tts.save("tab.mp3")
+        playsound("tab.mp3")
+        webbrowser.open("https://google.com")
+        os.remove("tab.mp3")
+    elif (recog == "open Wikipedia"):
+        print("open Wikipedia")
+        tts = gtts.gTTS("open wikipedia")
+        tts.save("wikipedia.mp3")
+        playsound("wikipedia.mp3")
+        webbrowser.open("https://wikipedia.org")
+        os.remove("wikipedia.mp3")
     else:
         print("I dont understand this")
 
@@ -280,7 +301,11 @@ def start():
                 if (recog == "Monday Monday Monday" ):
                     print("starting...")
                     mondai()
-                    start()                
+                    start()      
+                if (recog == "1D" ):
+                    print("starting...")
+                    mondai()
+                    start()          
                 if (recog == "mondi" ):
                     print("starting...")
                     mondai()
@@ -290,6 +315,10 @@ def start():
                     mondai()
                     start()
                 if (recog == "bungie" ):
+                    print("starting...")
+                    mondai()
+                    start()
+                if (recog == "deep" ):
                     print("starting...")
                     mondai()
                     start()
