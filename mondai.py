@@ -322,6 +322,18 @@ def start():
                     print("starting...")
                     mondai()
                     start()
+                if (recog == "one day" ):
+                    print("starting...")
+                    mondai()
+                    start()
+                if (recog == "Sunday" ):
+                    print("starting...")
+                    mondai()
+                    start()
+                if (recog == "mundane" ):
+                    print("starting...")
+                    mondai()
+                    start()
             except sr.UnknownValueError:
                 print("try again")
                 start()
